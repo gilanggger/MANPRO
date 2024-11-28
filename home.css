@@ -36,7 +36,7 @@ body {
 
 /* Menu Styling */
 .menu a {
-  margin: 0 15px;
+  margin: 0 25px;
   text-decoration: none;
   color: #ffffff;
   font-size: 16px;
@@ -50,7 +50,7 @@ body {
 /* Icon Styling */
 .icons {
   display: flex;
-  gap: 20px;
+  padding-left: 76px;
 }
 
 .icon {
@@ -81,7 +81,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: auto; /* Menjaga proporsi gambar */
+  height: auto; /*Menjaga proporsi gambar */
   z-index: 0; /* Letakkan di bawah konten */
 }
 
