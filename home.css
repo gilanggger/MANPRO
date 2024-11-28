@@ -1,3 +1,6 @@
+/* Import Font */
+@import url("https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&family=Gloock&display=swap");
+
 /* Reset CSS */
 * {
   margin: 0;
@@ -7,8 +10,8 @@
 
 /* General Styling */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #227B94; /* Warna biru */
+  font-family: "Arial", sans-serif;
+  background-color: #227b94; /* Warna biru */
   color: #000;
   overflow-x: hidden;
 }
@@ -19,7 +22,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 60px;
-  background-color: #227B94; /* Warna latar belakang navbar */
+  background-color: #227b94; /* Warna latar belakang navbar */
 }
 
 /* Logo Styling */
@@ -29,9 +32,9 @@ body {
 }
 
 .logo .logo-image {
-  width: 100px;  /* Ukuran logo yang lebih kecil */
-  height: auto;  /* Menjaga proporsi gambar */
-  object-fit: contain;  /* Menjaga gambar tidak terdistorsi */
+  width: 100px; /* Ukuran logo yang lebih kecil */
+  height: auto; /* Menjaga proporsi gambar */
+  object-fit: contain; /* Menjaga gambar tidak terdistorsi */
 }
 
 /* Menu Styling */
@@ -56,8 +59,8 @@ body {
 .icon {
   width: 24px; /* Ukuran ikon yang lebih kecil */
   height: 24px;
-  object-fit: contain;  /* Menjaga proporsi gambar */
-  cursor: pointer;  /* Menambahkan efek pointer pada ikon */
+  object-fit: contain; /* Menjaga proporsi gambar */
+  cursor: pointer; /* Menambahkan efek pointer pada ikon */
 }
 
 /* Hero Section Styling */
@@ -70,7 +73,7 @@ body {
 .white-background {
   position: relative;
   margin: 0 auto;
-  background-color: #F8F6E3;
+  background-color: #f8f6e3;
   width: 50%; /* Sesuaikan ukuran */
   padding: 150px 20px; /* Tambahkan padding *
   overflow: hidden; /* Agar elemen gambar tidak keluar area */
@@ -91,12 +94,14 @@ body {
   padding-top: 50px; /* Tambahkan jarak vertikal di dalam kontainer */
 }
 
-
 .hero-content h1 {
+  font-family: "Gloock", serif;
+  letter-spacing: 6px;
   font-size: 4vw; /* Responsif */
   color: #000;
-  font-weight: bold;
+  font-weight: 500;
   margin-bottom: 20px;
+  margin-top: 95px;
 }
 
 .hero-content h1 span {
@@ -104,9 +109,12 @@ body {
 }
 
 .hero-content p {
+  font-family: "Gantari", serif;
   font-size: 1.5vw;
-  margin-bottom: 25px;
+  margin-bottom: 60px;
   color: #333;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .order-btn {
@@ -136,12 +144,15 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 5%; /* Sesuaikan padding agar proporsional */
+  font-weight: bold;
+  margin-top: 43px;
 }
 
 .kanji {
-  font-size: 10vw; /* Ukuran responsif */
+  font-size: 13vw; /* Ukuran responsif */
   color: rgba(255, 255, 255, 0.1); /* Transparan */
   writing-mode: vertical-rl; /* Teks vertikal */
+  letter-spacing: 80px;
 }
 
 .kanji.right {
@@ -151,7 +162,7 @@ body {
 /* Styling untuk konten utama */
 .main-content {
   padding: 40px 20px;
-  background-color: #F8F6E3; /* Warna latar belakang untuk bagian konten */
+  background-color: #f8f6e3; /* Warna latar belakang untuk bagian konten */
   text-align: center;
   min-height: 100vh; /* Tinggi minimum sesuai layar */
   height: 100%; /* Tinggi layar penuh */
@@ -241,7 +252,7 @@ body {
 }
 /*MENU*/
 .menu-section {
-  background-color: #227B94;
+  background-color: #227b94;
   color: #fff;
   text-align: center;
   display: center;
@@ -261,14 +272,14 @@ body {
   justify-content: center;
   flex-wrap: nowrap; /* Jangan pindah baris */
   gap: 10px;
-  margin: 50px;;
+  margin: 50px;
   overflow-x: auto; /* Tambahkan scroll horizontal */
   padding: 10px;
 }
 
 .category {
   background-color: #fff;
-  color: #1B4B5A;
+  color: #1b4b5a;
   padding: 8px 16px;
   border: none;
   border-radius: 20px;
@@ -282,13 +293,10 @@ body {
   flex: 0 1 calc(16.66% - 10px); /* Tetap 6 per baris */
 }
 
-
-
 .category:hover {
   background-color: #007c89; /* Warna saat di-hover */
   color: #fff; /* Warna teks saat di-hover */
 }
-
 
 .menu-carousel {
   display: flex;
@@ -315,7 +323,12 @@ body {
   z-index: 2;
 }
 .arrow-btn:active {
-  background-color: rgba(255, 255, 255, 0.3); /* Efek transparan saat tombol ditekan */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ); /* Efek transparan saat tombol ditekan */
 }
 .left-btn {
   left: 10px; /* Posisi tombol panah kiri */
@@ -325,14 +338,14 @@ body {
 }
 /* Ikon panah untuk tombol kanan */
 .arrow-btn.right-btn::before {
-  content: '>'; /* Menampilkan panah kanan */
+  content: ">"; /* Menampilkan panah kanan */
   font-size: 22px;
   color: white; /* Warna putih untuk panah */
 }
 
 /* Ikon panah untuk tombol kiri */
 .arrow-btn.left-btn::before {
-  content: '<'; /* Menampilkan panah kiri */
+  content: "<"; /* Menampilkan panah kiri */
   font-size: 22px;
   color: white; /* Warna putih untuk panah */
 }
@@ -378,7 +391,6 @@ body {
   transition: transform 0.5s ease;
   gap: 20px;
 }
-
 
 /* Testimonial Section */
 .testimonial-section {
@@ -479,8 +491,8 @@ body {
   background-color: #006a70;
 }
 .dot.tengah {
-    width: 10px;
-  height: 10px;;
+  width: 10px;
+  height: 10px;
 }
 
 /* Responsiveness */
