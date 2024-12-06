@@ -58,6 +58,8 @@ nav {
   }
 }
 
+/*! ====================================== */
+
 /* HEROPAGE */
 .hero {
   background-color: #227b94; /* Warna latar biru */
@@ -68,7 +70,7 @@ nav {
 }
 
 .hero .cutout img {
-  margin-top: -130px;
+  margin-top: -100px;
   position: relative;
 }
 
@@ -151,6 +153,8 @@ nav {
   }
 }
 
+/*! ====================================== */
+
 /* ABOUT US */
 .main-content {
   background-color: #f8f6e3;
@@ -187,23 +191,94 @@ nav {
   padding-right: 20px;
 }
 
-/*MENU*/
-.menu-section {
+/*! ====================================== */
+
+/* MENU NIPPONYA */
+/* TABS MENU */
+.menu-nipo {
   background-color: #227b94;
-  color: #fff;
-  text-align: center;
-  display: center;
-  padding: 40px 40px;
-  margin-top: 2%;
-  min-height: 100vh; /* Tinggi minimum sesuai layar */
-  height: 100%; /* Tinggi layar penuh */
+  width: 100%;
+  height: 100%;
+  padding-top: 80px;
+  padding-bottom: 100px;
 }
 
-.menu-container {
+.menu-title h1 {
+  font-family: "Gloock", serif;
+  color: #f8f6e3;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.main-menu {
+  position: relative;
+  margin: 0 80px;
+  transition: 0.5s ease;
+}
+
+.tab-nav-bar {
+  position: relative;
+  margin: 50px 10px 30px 10px;
+}
+
+.tab-navigation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.tab-menu {
+  color: #f8f6e3;
+  list-style: none;
+  background-color: #227b94;
+  max-width: 800px;
+  padding: 10px;
+  white-space: nowrap;
+  border-radius: 50px;
+  box-shadow: #000;
+  overflow-x: auto;
+  user-select: none;
+}
+
+.tab-menu::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-btn {
+  display: inline-block;
+  border-radius: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(17.5px);
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 2px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.3s ease;
+}
+
+.tab-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.tab-btn.active {
+  background-color: #f8f6e3;
+  color: #227b94;
+}
+
+/* CATEGORY MENU */
+.menu-carousel {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
 }
+
 .menu-categories {
   display: flex;
   justify-content: center;
@@ -212,27 +287,6 @@ nav {
   margin: 50px;
   overflow-x: auto; /* Tambahkan scroll horizontal */
   padding: 10px;
-}
-
-.category {
-  background-color: #fff;
-  color: #1b4b5a;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 1em;
-  text-align: center;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  white-space: nowrap; /* Jangan biarkan teks turun */
-  overflow: hidden; /* Potong teks jika terlalu panjang */
-  text-overflow: ellipsis; /* Tambahkan "..." jika teks terlalu panjang */
-  flex: 0 1 calc(16.66% - 10px); /* Tetap 6 per baris */
-}
-
-.category:hover {
-  background-color: #007c89; /* Warna saat di-hover */
-  color: #fff; /* Warna teks saat di-hover */
 }
 
 .menu-carousel {
@@ -247,45 +301,31 @@ nav {
   top: 50%;
   transform: translateY(-50%);
   background-color: transparent;
-  border: 2px solid #fff; /* Border putih */
-  border-radius: 50%; /* Bentuk tombol menjadi bulat */
-  width: 40px; /* Ukuran tombol */
-  height: 40px; /* Ukuran tombol */
+  border: 1.5px solid #f8f6e3;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
-  font-size: 22px; /* Ukuran ikon panah */
+  font-size: 22px;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s ease;
   z-index: 2;
 }
+
 .arrow-btn:active {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.3
-  ); /* Efek transparan saat tombol ditekan */
-}
-.left-btn {
-  left: 10px; /* Posisi tombol panah kiri */
-}
-.right-btn {
-  right: 10px; /* Posisi tombol panah kanan */
-}
-/* Ikon panah untuk tombol kanan */
-.arrow-btn.right-btn::before {
-  content: ">"; /* Menampilkan panah kanan */
-  font-size: 22px;
-  color: white; /* Warna putih untuk panah */
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Ikon panah untuk tombol kiri */
-.arrow-btn.left-btn::before {
-  content: "<"; /* Menampilkan panah kiri */
-  font-size: 22px;
-  color: white; /* Warna putih untuk panah */
+.left-btn {
+  left: 10px;
 }
+
+.right-btn {
+  right: 10px;
+}
+
 .carousel-wrapper {
   overflow: hidden;
   width: 80%;
@@ -296,10 +336,10 @@ nav {
   gap: 20px;
 }
 
-.item-card{
+.item-card {
   padding: 15px;
   border-radius: 10px;
-  background: #F8F6E3;
+  background: #f8f6e3;
   backdrop-filter: blur(17.5px);
   height: auto;
   width: auto;
@@ -309,19 +349,19 @@ nav {
   width: 100%;
 }
 
-.menu-name{
-  color: #227B94;
+.menu-name {
+  color: #227b94;
   text-align: left;
   font-family: Gloock;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-bottom : 8px;
+  margin-bottom: 8px;
 }
 
-.menu-desk{
-  color: #227B94;
+.menu-desk {
+  color: #227b94;
   font-family: Gantari;
   font-size: 12px;
   font-style: normal;
@@ -331,33 +371,33 @@ nav {
   margin-bottom: 28px;
 }
 
-.menu-price{
+.menu-price {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 33px;
   border-radius: 30px;
-  background: #227B94;
+  background: #227b94;
   overflow-y: hidden;
 }
 
-.checkout-container{
+.checkout-container {
   height: 33px;
   width: 39px;
-  border: 2px solid #227B94;
+  border: 2px solid #227b94;
   border-radius: 0px 30px 30px 0px;
-  background: #F8F6E3;
+  background: #f8f6e3;
 }
 
-.checkout-container img{
+.checkout-container img {
   width: 25px;
   height: 22px;
   flex-shrink: 0;
 }
 
-.menu-price p{
-  color: #F8F6E3;
+.menu-price p {
+  color: #f8f6e3;
   font-family: Gantari;
   font-size: 18px;
   font-style: normal;
@@ -373,18 +413,18 @@ nav {
   align-items: center;
 }
 .item-card {
-  flex: 0 0 calc(33.33% - 20px); /* Default: 3 item per slide */
+  flex: 0 0 calc(33.33% - 20px);
 }
 
 @media (max-width: 1024px) {
   .item-card {
-    flex: 0 0 calc(50% - 20px); /* Layar sedang: 2 item per slide */
+    flex: 0 0 calc(50% - 20px);
   }
 }
 
 @media (max-width: 768px) {
   .item-card {
-    flex: 0 0 calc(100% - 20px); /* Layar kecil: 1 item per slide */
+    flex: 0 0 calc(100% - 20px);
   }
   .menu-items {
     display: flex;
@@ -394,152 +434,105 @@ nav {
   }
 }
 
-/* Testimonial Section */
-.testimonial-section {
-  text-align: center;
-  background-color: #f8f6e3;
-  padding: 40px 20px;
-  min-height: 120vh; /* Tinggi minimum sesuai layar */
-  height: 100%; /* Tinggi layar penuh */
+/*! ====================================== */
+
+/* TESTIMONIALS */
+.testimonials {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f6e3;
 }
 
-.testimonial-title {
-  font-family: "Gloock", serif;
-  letter-spacing: 6px;
-  font-size: 2.5rem;
+.testimonials-container {
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+}
+
+.testimonials .wrapper {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.wrapper .section-header {
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.wrapper .section-header .title {
+  font-size: 40px;
   font-weight: 500;
+  font-family: "Gloock", serif;
+  letter-spacing: 4px;
   color: #227b94;
-  margin-bottom: 70px;
-  margin-top: 70px;
+  text-transform: capitalize;
+  line-height: 1.2;
+}
+
+.wrapper .testimonial-item {
+  border: 3px solid #227b94;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.testimonial-item .info {
+  display: flex;
+  align-items: center;
+}
+
+.info img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.info .name {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: capitalize;
+  color: #227b94;
+}
+
+.info .job {
   text-transform: capitalize;
 }
 
-.testimonial-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  max-width: 1100px;
-  margin: auto;
-  font-family: "Gantari", serif;
+.testimonial-item p {
+  margin-top: 15px;
+  font-size: 15px;
 }
 
-.testimonial-card {
-  flex: 1 1 calc(50% - 30px);
-  max-width: 500px;
-  border: 2px solid #227b94;
-  border-radius: 10px;
-  padding: 20px;
-  background-color: #f8f6e3;
+.testimonials .swiper-pagination {
   position: relative;
-  margin-bottom: 30px;
-  box-sizing: border-box;
+  margin-top: 40px;
+  bottom: auto;
 }
 
-.profile {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 20px;
+.testimonials .swiper-pagination-bullet {
+  height: 12px;
+  width: 12px;
+  background: #227b94;
 }
 
-.profile-image {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: #d8d8d8;
-}
-
-.profile-info h4 {
-  margin: 0;
-  font-size: 1.2rem;
-  color: #227b94;
-}
-
-.profile-info p {
-  margin: 5px 0;
-  font-size: 1rem;
-  color: #777;
-}
-
-.testimonial-text {
-  margin-bottom: 20px;
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.6;
-  font-style: italic;
-  text-align: left;
-}
-
-.quote-icon {
-  position: absolute;
-  top: 0;
-  right: 20px;
-  font-size: 5.5rem;
-  color: #227b94;
-  font-weight: 500;
-  /* opacity: 0.1; */
-}
-
-.testimonial-dots {
-  margin-top: 3%;
-}
-
-.dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
-  background-color: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.dot.active {
-  background-color: #227b94;
-}
-.dot.tengah {
-  width: 10px;
-  height: 10px;
-}
-
-/* RESPONSIVE REVIEWS */
-@media (max-width: 768px) {
-  .testimonial-card {
-    flex: 1 1 calc(50% - 20px);
-  }
-
-  .testimonial-title {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .testimonial-card {
-    flex: 1 1 100%;
-    max-width: none;
-  }
-
-  .testimonial-title {
-    font-size: 1.75rem;
-  }
-
-  .testimonial-dots {
-    margin-top: 20px;
-  }
-}
+/* ! ========================================== */
 
 /* REVIEWS FORM */
 .reviews-area {
   background-color: #227b94;
   padding-bottom: 50px;
   padding-top: 30px;
+  z-index: 1;
 }
 
 .reviews-title h1 {
   font-family: "Gloock", serif;
   font-weight: 300;
-  font-size: 45px;
+  font-size: 40px;
   letter-spacing: 6px;
   color: #f8f6e3;
   text-align: center;
