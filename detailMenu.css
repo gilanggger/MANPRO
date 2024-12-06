@@ -4,44 +4,48 @@
   padding: 80px 0;
 }
 
-.menu-1 img {
-  width: 100%;
+.detail-menu .img-fluid {
+  width: 95%;
   border: 2px solid #227b94;
   border-radius: 8px 8px 0 0;
+  padding: 40px;
 }
 
 .logo-container {
   background-color: #227b94;
   padding: 10px;
   border-radius: 0 0 0 8px;
+  height: 70px;
+  margin-left: 13px;
 }
 
 .logo-container img {
-  width: 206px;
+  width: 190px;
 }
 
-.price {
+.menu-1 .price {
   background-color: #f8f6e3;
   color: #227b94;
   border-bottom: 2px solid #227b94;
   border-right: 2px solid #227b94;
   border-radius: 0 0 8px 0;
   margin-left: -12px;
+  height: 70px;
+  overflow-y: hidden;
+  width: 47.6%;
 }
 
 .price h2 {
   font-family: "Gloock", serif;
-  margin: 0;
-  line-height: 70px;
   font-size: 30px;
   font-weight: bold;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 .detail-content h1 {
   color: #227b94;
   font-family: "Gloock", serif;
-  font-size: 2rem;
+  font-size: 2.7rem;
   text-align: left;
 }
 
@@ -52,7 +56,7 @@
 
 .detail-content p {
   color: #227b94;
-  font-size: 1rem;
+  font-size: 16px;
   margin: 15px 0;
   text-align: left;
 }
@@ -62,6 +66,7 @@
   margin: 30px 0;
   font-weight: 650;
   color: #227b94;
+  font-size: 18px;
 }
 
 .detail-form {
@@ -75,66 +80,62 @@ textarea {
   border: 2px solid #227b94;
   border-radius: 10px;
   background-color: #f8f6e3;
-  margin-bottom: 15px;
-}
-
-.atribut {
-  margin-top: 30px;
 }
 
 .atribut .quantity-container {
+  margin-top: 30px;
   display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 0 10px;
+  width: 147px;
   background-color: #227b94;
-  margin-left: 13px;
-  margin-right: auto;
-  border-radius: 30px;
-  height: 60px;
-  width: 28%;
+  border-radius: 50px;
+  margin-left: 12px;
+  margin-right: 145px;
+}
+
+.atribut .quantity-container input {
+  -moz-appearance: textfield;
+  background-color: #227b94;
   color: #f8f6e3;
+  text-align: center;
+  font-size: 25px;
+  border: none;
 }
 
-.atribut .quantity {
-  font-size: 1.5rem;
-  font-weight: bold;
+.quantity-container input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.atribut .quantity-btn {
-  border-radius: 50%;
-  font-weight: 500;
+.quantity-container button {
+  background-color: #227b94;
+  color: #f8f6e3;
+  border: none;
   font-size: 30px;
-  width: 45px;
-  height: 45px;
-  background-color: #f8f6e3;
-  color: #227b94;
-  overflow-y: hidden;
+  cursor: pointer;
   padding: 0;
-}
-
-.atribut .quantity-btn:hover {
-  background-color: #f8f6e3;
-  color: #227b94;
-}
-
-.atribut .add-to-cart i {
-  font-weight: 600;
-  font-size: 1.5rem;
+  height: 0;
+  margin-top: 1.5px;
+  margin-left: 1px;
 }
 
 .atribut .add-to-cart {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
   width: 40%;
+  height: 47px;
   background-color: #227b94;
   color: #f8f6e3;
   font-size: 1.3rem;
-  font-weight: 550;
+  font-weight: 500;
   border: none;
-  padding: 10px;
   border-radius: 30px;
   cursor: pointer;
-  margin-right: 12px;
+  margin-top: 30px;
+  margin-left: 25px;
+  gap: 15px;
 }
 
 .atribut .add-to-cart:hover {
