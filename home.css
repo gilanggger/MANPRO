@@ -7,7 +7,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Gantari", serif;
-  overflow-x: hidden;
 }
 
 /* NAVBAR */
@@ -308,8 +307,6 @@ nav {
 
 .item-card img {
   width: 100%;
-  /* border-radius: 10px;
-  margin-bottom: 15px; */
 }
 
 .menu-name{
@@ -555,8 +552,8 @@ nav {
   color: #f8f6e3;
   margin-bottom: 60px;
 }
-
-.reviews-form .row {
+/* class row dihapus */
+.reviews-form .row { 
   background-color: #f8f6e3;
   padding: 30px 30px;
   border-radius: 25px;
