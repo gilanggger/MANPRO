@@ -148,7 +148,7 @@ nav {
 
   .hero .cutout img {
     width: 100%;
-    top: -30px;
+    top: -18px;
     z-index: -2;
   }
 }
@@ -162,7 +162,7 @@ nav {
   height: 100%;
   min-height: 650px;
   padding: 0 40px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 .about-content {
@@ -199,7 +199,7 @@ nav {
   background-color: #227b94;
   width: 100%;
   height: 100%;
-  padding-top: 50px;
+  padding-top: 80px;
   padding-bottom: 100px;
 }
 
@@ -218,7 +218,7 @@ nav {
 
 .tab-nav-bar {
   position: relative;
-  margin: 50px 10px 70px 10px;
+  margin: 50px 10px 30px 10px;
 }
 
 .tab-navigation {
@@ -434,139 +434,92 @@ nav {
   }
 }
 
-/* TESTIMONIALS SECTION */
-.testimonial-section {
-  text-align: center;
-  background-color: #f8f6e3;
-  padding: 40px 20px;
-  min-height: 120vh; /* Tinggi minimum sesuai layar */
-  height: 100%; /* Tinggi layar penuh */
+/*! ====================================== */
+
+/* TESTIMONIALS */
+.testimonials {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f6e3;
 }
 
-.testimonial-title {
-  font-family: "Gloock", serif;
-  letter-spacing: 6px;
-  font-size: 2.5rem;
+.testimonials-container {
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+}
+
+.testimonials .wrapper {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.wrapper .section-header {
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.wrapper .section-header .title {
+  font-size: 40px;
   font-weight: 500;
+  font-family: "Gloock", serif;
+  letter-spacing: 4px;
   color: #227b94;
-  margin-bottom: 70px;
-  margin-top: 70px;
+  text-transform: capitalize;
+  line-height: 1.2;
+}
+
+.wrapper .testimonial-item {
+  border: 3px solid #227b94;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.testimonial-item .info {
+  display: flex;
+  align-items: center;
+}
+
+.info img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.info .name {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: capitalize;
+  color: #227b94;
+}
+
+.info .job {
   text-transform: capitalize;
 }
 
-.testimonial-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  max-width: 1100px;
-  margin: auto;
-  font-family: "Gantari", serif;
+.testimonial-item p {
+  margin-top: 15px;
+  font-size: 15px;
 }
 
-.testimonial-card {
-  flex: 1 1 calc(50% - 30px);
-  max-width: 500px;
-  border: 2px solid #227b94;
-  border-radius: 10px;
-  padding: 20px;
-  background-color: #f8f6e3;
+.testimonials .swiper-pagination {
   position: relative;
-  margin-bottom: 30px;
-  box-sizing: border-box;
+  margin-top: 40px;
+  bottom: auto;
 }
 
-.profile {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 20px;
+.testimonials .swiper-pagination-bullet {
+  height: 12px;
+  width: 12px;
+  background: #227b94;
 }
 
-.profile-image {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: #d8d8d8;
-}
-
-.profile-info h4 {
-  margin: 0;
-  font-size: 1.2rem;
-  color: #227b94;
-}
-
-.profile-info p {
-  margin: 5px 0;
-  font-size: 1rem;
-  color: #777;
-}
-
-.testimonial-text {
-  margin-bottom: 20px;
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.6;
-  font-style: italic;
-  text-align: left;
-}
-
-.quote-icon {
-  position: absolute;
-  top: 0;
-  right: 20px;
-  font-size: 5.5rem;
-  color: #227b94;
-  font-weight: 500;
-}
-
-.testimonial-dots {
-  margin-top: 3%;
-}
-
-.dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
-  background-color: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.dot.active {
-  background-color: #227b94;
-}
-.dot.tengah {
-  width: 10px;
-  height: 10px;
-}
-
-/* RESPONSIVE REVIEWS */
-@media (max-width: 768px) {
-  .testimonial-card {
-    flex: 1 1 calc(50% - 20px);
-  }
-
-  .testimonial-title {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .testimonial-card {
-    flex: 1 1 100%;
-    max-width: none;
-  }
-
-  .testimonial-title {
-    font-size: 1.75rem;
-  }
-
-  .testimonial-dots {
-    margin-top: 20px;
-  }
-}
+/* ! ========================================== */
 
 /* REVIEWS FORM */
 .reviews-area {
@@ -579,7 +532,7 @@ nav {
 .reviews-title h1 {
   font-family: "Gloock", serif;
   font-weight: 300;
-  font-size: 45px;
+  font-size: 40px;
   letter-spacing: 6px;
   color: #f8f6e3;
   text-align: center;

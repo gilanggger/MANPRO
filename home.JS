@@ -32,3 +32,13 @@ window.addEventListener("resize", () => {
   currentSlide = 0;
   menuItems.style.transform = `translateX(0)`;
 });
+
+var swiper = new Swiper(".slider", {
+  grabCursor: true,
+  slidesPerView: 2,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
