@@ -1,3 +1,4 @@
+// INPUT QUANTITY
 const myInput = document.getElementById("my-input");
 function stepper(btn) {
   let id = btn.getAttribute("id");
