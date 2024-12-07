@@ -545,8 +545,8 @@ nav {
   color: #f8f6e3;
   margin-bottom: 60px;
 }
-
-.reviews-form .row {
+/* class row dihapus */
+.reviews-form .row { 
   background-color: #f8f6e3;
   padding: 30px 30px;
   border-radius: 25px;
