@@ -582,3 +582,68 @@ nav {
   border-radius: 10px;
   background-color: #227b94;
 }
+
+/* Footer Styles */
+/* FOOTER */
+.footer {
+  background-color: #f8f6e3;
+  padding: 20px 0;
+}
+.footer-container {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%; /* Padding kiri dan kanan 5% */
+}
+
+
+.footer-logo img {
+  width: 150px;
+}
+
+.footer-copyright {
+  color: #000;
+  font-size: 18px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+}
+
+/* RESPONSIVE FOOTER */
+@media (max-width: 768px) {
+  .footer-logo img {
+    width: 120px;
+  }
+
+  .footer-social {
+    margin-right: 25px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-copyright {
+    order: 1;
+  }
+
+  .footer-social {
+    order: 2;
+  }
+
+  .footer-logo {
+    order: 3;
+  }
+}
