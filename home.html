@@ -22,6 +22,9 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
     <!-- SwiperJS -->
     <link
       rel="stylesheet"
@@ -112,6 +115,8 @@
         </div>
         <div class="tab-nav-bar">
           <div class="tab-navigation">
+            <i class="fa-solid fa-chevron-left leftt-btn"></i>
+            <i class="fa-solid fa-chevron-right rightt-btn"></i>
             <ul class="tab-menu">
               <li class="tab-btn active">Sushi</li>
               <li class="tab-btn">Ramen</li>
@@ -123,11 +128,12 @@
           </div>
         </div>
 
-          <div class="menu-carousel">
-
-            <button class="arrow-btn left-btn text-white"><i class="bi bi-caret-left-fill"></i></button>
-              <div class="carousel-wrapper">
-                <div class="menu-items">
+        <section class="menu-carousel">
+          <div class="swiper-container active">
+            <div class="swiper menu">
+              <div class="swiper-wrapper menu-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide menu-slide">
                   <div class="item-card">
                     <img src="sushi/sushi 1.png" alt="Gunkan Sushi">
                     <p class="menu-name">Spicy Shrimp Inari Sushi</p>
@@ -135,21 +141,13 @@
                     <div class="menu-price">
                       <p>Rp 25.000</p>
                       <div class="checkout-container">
-                        <img src="akses/checkout.png" alt="">
-                      </div>
-                    </div>
-                  </div>            
-                  <div class="item-card">
-                    <img src="sushi/sushi 1.png" alt="Gunkan Sushi">
-                    <p class="menu-name">Spicy Shrimp Inari Sushi</p>
-                    <p class="menu-desk">Lorem ipsum dolor sit amet consectetur. Orci sit laoreet eu eget arcu auctor.</p>
-                    <div class="menu-price">
-                      <p>Rp 25.000</p>
-                      <div class="checkout-container">
-                        <img src="akses/checkout.png" alt="">
+                        <i class="bi bi-bag-check"></i>                      
                       </div>
                     </div>
                   </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide menu-slide">
                   <div class="item-card">
                     <img src="sushi/sushi 1.png" alt="Gunkan Sushi">
                     <p class="menu-name">Spicy Shrimp Inari Sushi</p>
@@ -157,82 +155,93 @@
                     <div class="menu-price">
                       <p>Rp 25.000</p>
                       <div class="checkout-container">
-                        <img src="akses/checkout.png" alt="">
-                      </div>
-                    </div>
-                  </div>           
-                  <div class="item-card">
-                    <img src="sushi/sushi 1.png" alt="Gunkan Sushi">
-                    <p class="menu-name">Spicy Shrimp Inari Sushi</p>
-                    <p class="menu-desk">Lorem ipsum dolor sit amet consectetur. Orci sit laoreet eu eget arcu auctor.</p>
-                    <div class="menu-price">
-                      <p>Rp 25.000</p>
-                      <div class="checkout-container">
-                        <img src="akses/checkout.png" alt="">
+                        <i class="bi bi-bag-check"></i>                      
                       </div>
                     </div>
                   </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide menu-slide">
                   <div class="item-card">
                     <img src="sushi/sushi 1.png" alt="Gunkan Sushi">
-                    <p class="menu-name">Spicy Shrimp Inari Sushi</p>
+                    <p class="menu-name">ABC</p>
                     <p class="menu-desk">Lorem ipsum dolor sit amet consectetur. Orci sit laoreet eu eget arcu auctor.</p>
                     <div class="menu-price">
                       <p>Rp 25.000</p>
                       <div class="checkout-container">
-                        <img src="akses/checkout.png" alt="">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item-card">
-                    <img src="sushi/sushi 1.png" alt="Gunkan Sushi">
-                    <p class="menu-name">Spicy Shrimp Inari Sushi</p>
-                    <p class="menu-desk">Lorem ipsum dolor sit amet consectetur. Orci sit laoreet eu eget arcu auctor.</p>
-                    <div class="menu-price">
-                      <p>Rp 25.000</p>
-                      <div class="checkout-container">
-                        <img src="akses/checkout.png" alt="">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item-card">
-                    <img src="sushi/sushi 1.png" alt="Gunkan Sushi">
-                    <p class="menu-name">Spicy Shrimp Inari Sushi</p>
-                    <p class="menu-desk">Lorem ipsum dolor sit amet consectetur. Orci sit laoreet eu eget arcu auctor.</p>
-                    <div class="menu-price">
-                      <p>Rp 25.000</p>
-                      <div class="checkout-container">
-                        <img src="akses/checkout.png" alt="">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item-card">
-                    <img src="sushi/sushi 1.png" alt="Gunkan Sushi">
-                    <p class="menu-name">Spicy Shrimp Inari Sushi</p>
-                    <p class="menu-desk">Lorem ipsum dolor sit amet consectetur. Orci sit laoreet eu eget arcu auctor.</p>
-                    <div class="menu-price">
-                      <p>Rp 25.000</p>
-                      <div class="checkout-container">
-                        <img src="akses/checkout.png" alt="">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item-card">
-                    <img src="sushi/sushi 1.png" alt="Gunkan Sushi">
-                    <p class="menu-name">Spicy Shrimp Inari Sushi</p>
-                    <p class="menu-desk">Lorem ipsum dolor sit amet consectetur. Orci sit laoreet eu eget arcu auctor.</p>
-                    <div class="menu-price">
-                      <p>Rp 25.000</p>
-                      <div class="checkout-container">
-                        <img src="akses/checkout.png" alt="">
+                        <i class="bi bi-bag-check"></i>                      
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            <button class="arrow-btn right-btn text-white"><i class="bi bi-caret-right-fill"></i></button>
+            </div>
+            <!-- Navigation Buttons -->
+            <div class="swiper-btn-prev">
+              <i class="fa-solid fa-chevron-left"></i>
+            </div>
+            <div class="swiper-btn-next">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
           </div>
-        </div>
-      </div>
+        
+          <!-- Optional Second Swiper -->
+          <div class="swiper-container">
+            <div class="swiper menu">
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                  <div class="item-card">
+                    <img src="sushi/sushi 1.png" alt="Gunkan Sushi">
+                    <p class="menu-name">Spicy Shrimp Inari Sushi</p>
+                    <p class="menu-desk">Lorem ipsum dolor sit amet consectetur. Orci sit laoreet eu eget arcu auctor.</p>
+                    <div class="menu-price">
+                      <p>Rp 25.000</p>
+                      <div class="checkout-container">
+                        <i class="bi bi-bag-check"></i>                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                  <div class="item-card">
+                    <img src="sushi/sushi 1.png" alt="Gunkan Sushi">
+                    <p class="menu-name">Spicy Shrimp Inari Sushi</p>
+                    <p class="menu-desk">Lorem ipsum dolor sit amet consectetur. Orci sit laoreet eu eget arcu auctor.</p>
+                    <div class="menu-price">
+                      <p>Rp 25.000</p>
+                      <div class="checkout-container">
+                        <i class="bi bi-bag-check"></i>  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                  <div class="item-card">
+                    <img src="sushi/sushi 1.png" alt="Gunkan Sushi">
+                    <p class="menu-name">Spicy Shrimp Inari Sushi</p>
+                    <p class="menu-desk">Lorem ipsum dolor sit amet consectetur. Orci sit laoreet eu eget arcu auctor.</p>
+                    <div class="menu-price">
+                      <p>Rp 25.000</p>
+                      <div class="checkout-container">
+                        <i class="bi bi-bag-check"></i> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Navigation Buttons -->
+            <div class="swiper-btn-prev">
+              <i class="fa-solid fa-chevron-left"></i>
+            </div>
+            <div class="swiper-btn-next">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+        </section>        
     </section>
 
     <!-- TESTIMONIALS -->
