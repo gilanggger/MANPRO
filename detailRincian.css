@@ -1,0 +1,118 @@
+/* Style Table & Buttons */
+.detail-order {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #f8f6e3;
+}
+
+.detail-order h1 {
+  font-family: "Gloock", serif;
+  color: #227b94;
+  letter-spacing: 6px;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.text-teal {
+  color: #227b94;
+}
+
+.table thead .order-id th {
+  background-color: #227b94;
+  color: #f8f6e3;
+  text-align: start;
+  border: 2px solid #227b94;
+  padding: 10px;
+}
+
+.table thead .table-secondary th {
+  background-color: #f8f6e3;
+  color: #227b94;
+  text-align: center;
+  border: 2px solid #227b94;
+}
+
+.table tbody tr td {
+  background-color: #f8f6e3;
+  border: 2px solid #227b94;
+}
+
+/* Footer Table Style */
+#cart-container tfoot tr td {
+  background-color: #227b94;
+  font-size: 18px;
+  padding: 10px 0;
+  color: #f8f6e3;
+}
+
+#cart-container tfoot .subtax td {
+  border-left: 2px solid #227b94;
+  border-right: 2px solid #227b94;
+  border-top: 2px solid #227b94;
+}
+
+#cart-container tfoot tr .text-start {
+  padding: 10px;
+  font-weight: 600;
+}
+
+#cart-container tfoot .bg-light td {
+  border-right: 2px solid #227b94;
+  border-left: 2px solid #227b94;
+  border-top: 4px solid #f8f6e3;
+}
+
+#cart-container tfoot #subtotal,
+#cart-container tfoot #tax,
+#cart-container tfoot #total {
+  padding-left: 45px;
+}
+
+.text-teal {
+  color: #227b94;
+}
+
+.btn-teal {
+  background-color: #227b94;
+  color: white;
+  border: none;
+}
+
+.btn-teal:hover {
+  background-color: #195c6c;
+}
+
+.qty-btn {
+  width: 30px;
+  height: 30px;
+  line-height: 1;
+  text-align: center;
+}
+
+#cart-container .btn-teal {
+  background-color: #227b94;
+  color: #fff;
+}
+
+#cart-container .btn-teal:hover {
+  background-color: #195c6c;
+}
+
+/* Background for Order Now Button Row */
+#cart-container tfoot tr:last-child td {
+  border: 2px solid #227b94; /* Tambahkan border agar konsisten */
+}
+
+/* Button Style */
+#cart-container tfoot .btn-teal {
+  background-color: #f8f6e3;
+  color: #227b94;
+  border: none;
+  font-size: 16px;
+  width: 98%;
+}
+
+#cart-container tfoot .btn-teal:hover {
+  background-color: #195c6c;
+  color: #fff;
+}
