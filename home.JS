@@ -100,15 +100,15 @@ var swiper = new Swiper(".menu", {
   centeredSlides: true,
   slidesPerView: "auto",
   initialSlide: 1,
-
-  coverflowEffect: {
-    rotate: 0,
-    stretch: 0,
-    depth: 200,
-    modifier: 1,
-    slideShadows: false,
-  },
   loop: false,
+  speed: 700, // Atur kecepatan transisi slide utama
+  coverflowEffect: {
+    rotate: 0, // Rotasi slide
+    stretch: 10, // Jarak antar slide
+    depth: 300, // Kedalaman 3D
+    modifier: 1, // Efek coverflow
+    slideShadows: false, // Nonaktifkan bayangan
+  },
   navigation: {
     nextEl: ".swiper-btn-next",
     prevEl: ".swiper-btn-prev",
@@ -117,14 +117,14 @@ var swiper = new Swiper(".menu", {
     enabled: true,
   },
   mousewheel: {
-    thresholdDelta: 70,
+    thresholdDelta: 70, // Atur sensitivitas mousewheel
   },
   breakpoints: {
     560: {
-      slidesPerView: 1.5,
+      slidesPerView: 2,
     },
     768: {
-      slidesPerView: 2,
+      slidesPerView: 3,
     },
     1024: {
       slidesPerView: 3,
@@ -179,4 +179,18 @@ var swiper = new Swiper(".slider", {
   mousewheel: {
     thresholdDelta: 70,
   },
+});
+
+// Fungsi untuk menghubungkan checkout-container ke detailMenu.html
+document.addEventListener("DOMContentLoaded", function () {
+  // Ambil semua elemen dengan class "checkout-container"
+  const checkoutButtons = document.querySelectorAll(".checkout-container");
+
+  // Tambahkan event listener untuk setiap tombol
+  checkoutButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // Redirect ke halaman detail menu
+      window.location.href = "detailMenu.html";
+    });
+  });
 });
