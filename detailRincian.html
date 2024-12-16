@@ -130,20 +130,30 @@
                     width="80"
                   />
                   <div>
-                    <h6 class="fw-bold mb-1 order-id"></h6>
-                    <!-- Nama menu -->
+                    <h6 class="fw-bold mb-1">Spicy Shrimp Inari Sushi</h6>
                     <p class="mb-0 small text-muted">
                       Lorem ipsum dolor sit amet consectetur.
                     </p>
                   </div>
                 </div>
               </td>
-              <td class="text-center unit-price"></td>
-              <!-- Harga -->
-              <td class="text-center qty"></td>
-              <!-- Jumlah -->
-              <td class="text-center total-price"></td>
-              <!-- Total Harga -->
+              <td class="text-center unit-price">25000</td>
+              <td class="text-center">
+                <button
+                  class="btn btn-sm btn-outline-secondary qty-btn"
+                  onclick="updateQty(this, -1)"
+                >
+                  -
+                </button>
+                <span class="mx-2 qty">2</span>
+                <button
+                  class="btn btn-sm btn-outline-secondary qty-btn"
+                  onclick="updateQty(this, 1)"
+                >
+                  +
+                </button>
+              </td>
+              <td class="text-center total-price">50000</td>
               <td class="text-center">
                 <button class="btn btn-danger btn-sm">
                   <i class="fas fa-trash"></i>
