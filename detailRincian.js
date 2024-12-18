@@ -54,7 +54,7 @@ function recalculateTotals() {
   });
 
   // Hitung tax 5% dan total akhir
-  const tax = Math.round(subtotal * 0.05);
+  const tax = Math.round(subtotal * 0.15);
   const total = subtotal + tax;
 
   // Tampilkan di halaman

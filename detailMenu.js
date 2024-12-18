@@ -1,4 +1,4 @@
-// INPUT QUANTITY
+// Existing code for quantity stepper
 const myInput = document.getElementById("my-input");
 function stepper(btn) {
   let id = btn.getAttribute("id");
@@ -14,41 +14,37 @@ function stepper(btn) {
   }
 }
 
-// Fungsi untuk menghubungkan checkout-container ke detailMenu.html
+// Existing code for checkout container
 document.addEventListener("DOMContentLoaded", function () {
-  // Ambil semua elemen dengan class "checkout-container"
   const checkoutButtons = document.querySelectorAll(".checkout-container");
 
-  // Tambahkan event listener untuk setiap tombol
   checkoutButtons.forEach((button) => {
     button.addEventListener("click", function () {
-      // Redirect ke halaman detail menu
       window.location.href = "detailMenu.html";
     });
   });
 });
 
+// Existing code for adding order data
 document.addEventListener("DOMContentLoaded", function () {
-  const addToCartButton = document.querySelector(".add-to-cart"); // Tombol Add to Cart
-  const noteInput = document.querySelector("textarea[name='note']"); // Input catatan
-  const qtyInput = document.querySelector("#my-input"); // Input jumlah pesanan
+  const addToCartButton = document.querySelector(".add-to-cart");
+  const noteInput = document.querySelector("textarea[name='note']");
+  const qtyInput = document.querySelector("#my-input");
 
   addToCartButton.addEventListener("click", function (event) {
-    event.preventDefault(); // Mencegah form submit
+    event.preventDefault();
 
-    // Ambil data dari form
-    const menuName = document.querySelector("h1").textContent; // Nama menu
+    const menuName = document.querySelector("h1").textContent;
     const price = parseInt(
       document
         .querySelector(".price h2")
         .textContent.replace("Rp", "")
         .replace(".", "")
         .trim()
-    ); // Harga
-    const quantity = parseInt(qtyInput.value); // Jumlah pesanan
-    const note = noteInput.value; // Catatan pesan
+    );
+    const quantity = parseInt(qtyInput.value);
+    const note = noteInput.value;
 
-    // Simpan data ke localStorage
     const orderData = {
       name: menuName,
       price: price,
@@ -56,10 +52,81 @@ document.addEventListener("DOMContentLoaded", function () {
       note: note,
     };
 
-    // Menyimpan data pesanan dalam localStorage
     localStorage.setItem("orderData", JSON.stringify(orderData));
 
-    // Arahkan ke halaman rincian pesanan
     window.location.href = "detailRincian.html";
   });
+});
+
+// NEW: Add these new functions at the end of the file
+// Function to update cart count
+function updateCartCount() {
+  const cartCountElement = document.getElementById("cart-count");
+  let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+  cartCountElement.textContent = cartItems.length;
+
+  if (cartItems.length === 0) {
+    cartCountElement.style.display = "none";
+  } else {
+    cartCountElement.style.display = "inline-block";
+  }
+}
+
+// Modify the existing add to cart event listener to use the new cart storage method
+document.addEventListener("DOMContentLoaded", function () {
+  const addToCartButton = document.querySelector(".add-to-cart");
+  const noteInput = document.querySelector("textarea[name='note']");
+  const qtyInput = document.querySelector("#my-input");
+
+  addToCartButton.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    // Collect item details
+    const menuName = document.querySelector("h1").textContent;
+    const price = parseInt(
+      document
+        .querySelector(".price h2")
+        .textContent.replace("Rp", "")
+        .replace(".", "")
+        .trim()
+    );
+    const quantity = parseInt(qtyInput.value);
+    const note = noteInput.value;
+
+    // Only add to cart if quantity is greater than 0
+    if (quantity > 0) {
+      // Retrieve existing cart items or initialize empty array
+      let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+      // Create new cart item
+      const newItem = {
+        name: menuName,
+        price: price,
+        quantity: quantity,
+        note: note,
+      };
+
+      // Add new item to cart
+      cartItems.push(newItem);
+
+      // Save updated cart back to localStorage
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+      // Update cart count
+      updateCartCount();
+
+      // Optional: Show a confirmation message
+      alert(`${quantity} ${menuName} added to cart!`);
+
+      // Reset quantity input and note
+      qtyInput.value = 0;
+      noteInput.value = "";
+    } else {
+      alert("Please select a quantity before adding to cart");
+    }
+  });
+
+  // Call this on page load to set initial cart count
+  updateCartCount();
 });
